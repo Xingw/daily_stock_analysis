@@ -235,7 +235,7 @@ class LLMToolAdapter:
         call_kwargs: Dict[str, Any] = {
             "model": model,
             "messages": openai_messages,
-            "temperature": self._get_temperature(model),
+            "temperature": self._get_temperature(model), "timeout": 3600,
         }
 
         extra = get_thinking_extra_body(model_short)

@@ -631,7 +631,7 @@ class GeminiAnalyzer:
                         {"role": "user", "content": prompt},
                     ],
                     "temperature": temperature,
-                    "max_tokens": max_tokens,
+                    "max_tokens": max_tokens, "timeout": 3600,
                 }
                 extra = get_thinking_extra_body(model_short)
                 if extra:
